@@ -8,17 +8,17 @@
 
 <br />
 
-[![Release](https://img.shields.io/badge/Release-v0.0.9-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![macOS Release](https://img.shields.io/badge/macOS-v0.1.2-7c3aed?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](#windows-1011-x64)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Privacy](https://img.shields.io/badge/API_Key-仅存本机-10b981?style=for-the-badge)](#-安全与隐私)
 [![License](https://img.shields.io/badge/License-GPLv3-f59e0b?style=for-the-badge)](LICENSE)
 
 ### 一个应用，管理你的 AI 编程工具与模型
 
-AiDoIt 同时支持 **Windows、macOS 桌面端与 Ubuntu x64 / ARM64**：在桌面端集中管理 **Codex、ChatGPT、Claude Code、Claude Desktop 与 DeepSeek Harness**，在 Ubuntu 服务器上快速部署 Codex 与 Claude Code，并在官方账号和第三方 Provider 模型之间自由切换。
+AiDoIt 同时支持 **Windows、macOS Apple Silicon 桌面端与 Ubuntu x64 / ARM64**：在桌面端集中管理 **Codex、ChatGPT、Claude Code、Claude Desktop 与 DeepSeek Harness**，在 Ubuntu 服务器上快速部署 Codex 与 Claude Code，并在官方账号和第三方 Provider 模型之间自由切换。
 
-[立即下载](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) · [快速开始](#-快速开始) · [图文教程](#-帮助文档) · [问题反馈](https://github.com/AiDoIt-Platform/AiDoIt/issues/new)
+[立即下载](#-下载与安装) · [快速开始](#-快速开始) · [图文教程](#-帮助文档) · [问题反馈](https://github.com/AiDoIt-Platform/AiDoIt/issues/new)
 
 </div>
 
@@ -35,7 +35,7 @@ AiDoIt 同时支持 **Windows、macOS 桌面端与 Ubuntu x64 / ARM64**：在桌
 | **启用前实测** | 获取模型后先测试真实响应速度与可用性，减少无效配置 |
 | **配置互不干扰** | Codex、Claude 与 Harness 分区管理，各自拥有独立配置 |
 | **一键恢复** | 开启接入前保留原始状态，关闭后恢复官方配置 |
-| **应用内更新** | 从 `v0.0.7` 开始可在应用内发现并安装后续正式版本 |
+| **应用内更新** | Windows 从 `v0.0.7` 开始支持应用内更新；macOS 通过独立 OTA 通道获取更新 |
 | **密钥本地保存** | Provider API Key 保留在本机，界面不会完整展示 |
 
 <br />
@@ -46,7 +46,7 @@ AiDoIt 同时支持 **Windows、macOS 桌面端与 Ubuntu x64 / ARM64**：在桌
 
 ### Windows 10/11 x64
 
-当前 Windows 最新正式版为 **AiDoIt v0.0.9**。请只从 [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) 下载。
+以下为 **AiDoIt v0.0.9** 的 Windows 安装包。Windows 与 macOS 独立发布，请从对应的 [Windows 版本 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.0.9) 下载。
 
 | 安装包 | 适用场景 | 下载 |
 |---|---|---|
@@ -55,13 +55,22 @@ AiDoIt 同时支持 **Windows、macOS 桌面端与 Ubuntu x64 / ARM64**：在桌
 > [!TIP]
 > 需要校验文件、覆盖升级或卸载说明？请查看 [Windows 安装、升级、校验与卸载](HelpMd/Windows/Installation/README.md)。
 
-### macOS（Apple Silicon）
+### macOS Apple Silicon（aarch64）
 
-[下载 AiDoIt v0.0.9 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_aarch64.dmg)
+当前 macOS 正式版为 **AiDoIt v0.1.2**，适用于 Apple Silicon Mac（M 系列芯片）。请从 [v0.1.2 版本 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) 下载。
 
-打开后将 AiDoIt 拖入 Applications。
+| 文件 | 用途 | 下载 |
+|---|---|---|
+| `AiDoIt_0.1.2_aarch64.dmg` | 手动安装：打开后将 `AiDoIt.app` 拖入 Applications | [下载 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_aarch64.dmg) |
+| `AiDoIt_0.1.2_aarch64.app.tar.gz` | 应用内 OTA 更新包 | [下载更新包](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_aarch64.app.tar.gz) |
+| `macos-ota-SHA256SUMS.txt` | DMG 与更新包的 SHA-256 校验值 | [下载校验文件](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/macos-ota-SHA256SUMS.txt) |
 
-此构建使用 ad-hoc 签名，未做 Apple 公证；首次打开时可能需要右键选择打开。
+本版修复 Claude 与 Codex 的 Kiro 搜索及工具执行兼容性，适配新增 GPT、Claude 模型，并修复模型目录中的指令、上下文窗口和工具能力配置。
+
+已安装旧版的用户可在应用内检查更新；macOS OTA 通道已更新至 `0.1.2`。
+
+> [!NOTE]
+> 此构建使用 **ad-hoc 签名，未做 Apple 公证**，已通过严格签名验证。首次打开时可能需要右键选择“打开”，或在 **系统设置 → 隐私与安全性** 中选择“仍要打开”。安装及使用步骤见 [macOS Codex 图文教程](HelpMd/macOS/Codex/README.md)。
 
 ### Ubuntu x64 / ARM64
 
@@ -81,6 +90,12 @@ curl -fsSL https://service.aidoit.pro/uninstall | bash
 > `curl | bash` 会直接执行远程脚本。运行前请确认域名和脚本来源可信；完整流程请阅读 [Ubuntu 图文教程](HelpMd/Ubuntu/README.md)。
 
 ## 🚀 快速开始
+
+### macOS 安装
+
+1. 下载上方 DMG，打开后将 `AiDoIt.app` 拖入 **Applications（应用程序）**。
+2. 启动 AiDoIt，按需完成首次打开授权。
+3. 按 [Codex 接入教程](HelpMd/macOS/Codex/README.md) 或 [Claude 接入教程](HelpMd/macOS/Claude/README.md) 添加 Provider、选择模型并开启智能路由。
 
 ### Windows 与 macOS
 
