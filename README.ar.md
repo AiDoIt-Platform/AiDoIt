@@ -8,7 +8,7 @@
 
 <br />
 
-[![الإصدار](https://img.shields.io/badge/Release-v0.0.9-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![الإصدار](https://img.shields.io/badge/Release-v0.1.2-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![الخصوصية](https://img.shields.io/badge/API_Keys-محلية-10b981?style=for-the-badge)](#-الأمان-والخصوصية)
@@ -48,14 +48,24 @@
 
 ### Windows 10/11 x64
 
-الإصدار المستقر الحالي لـ Windows هو **AiDoIt v0.0.9**. نزّله فقط من [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
+الإصدار المستقر الحالي لـ Windows هو **AiDoIt v0.1.2**. نزّله فقط من [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
 
 | الحزمة | الاستخدام المقترح | التنزيل |
 |---|---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | برنامج التثبيت القياسي الموصى به لمعظم المستخدمين | [تنزيل Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_x64-setup.exe) |
+| `AiDoIt_0.1.2_x64-setup.exe` | برنامج التثبيت القياسي الموصى به لمعظم المستخدمين | [تنزيل Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
 
 > [!TIP]
-> للتحقق من المجموع الاختباري أو الترقية أو تثبيت MSI بصمت، راجع [دليل تثبيت Windows](HelpMd/Windows/Installation/README.md).
+> للتحقق من المجموع الاختباري أو الترقية أو إلغاء التثبيت، راجع [دليل تثبيت Windows](HelpMd/Windows/Installation/README.md).
+
+#### أبرز تحديثات Windows v0.1.2
+
+- إصلاح توافق البحث واستدعاء الأدوات في Kiro / Claude، مع تحويل استدعاءات البحث على الخادم ونتائجها إلى أحداث Responses.
+- استكمال مستويات الاستدلال وإعدادات استدعاء الأدوات للنماذج، وتصحيح هوية النموذج في تعليمات Codex ونوافذ السياق في Claude / Kiro.
+- تحسين بدء DeepSeek Harness بتحديث معلومات إصدارات npm وفتح المتصفح عندما تصبح الخدمة جاهزة، وإضافة محاولات إعادة محدودة ورسائل أوضح لأخطاء الشبكة عند تنزيل Node.js.
+
+[v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) · [ملاحظات إصدار Windows الكاملة](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)
+
+تم تحديث قناة Windows OTA إلى `0.1.2` مع الاحتفاظ بمفتاح التحديث العام الحالي. يمكن للإصدارات السابقة التي تستخدم القناة والمفتاح نفسيهما التحقق من التحديثات داخل التطبيق، أو الترقية باستخدام برنامج التثبيت أعلاه. [قناة Windows OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [بيان التحديث العام](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 

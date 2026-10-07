@@ -19,7 +19,7 @@
 | **macOS** | 请从项目 Releases 获取对应版本 | [Codex 图文教程](./macOS/Codex/README.md) | [Claude 图文教程](./macOS/Claude/README.md) |
 
 > [!NOTE]
-> Windows 和 macOS 当前正式版为 `v0.0.9`；Ubuntu 使用在线安装脚本，支持选择 Codex、Claude Code 或同时部署。请进入对应平台的教程操作。
+> Windows 当前正式版为 `v0.1.2`，macOS 下载请参见首页；Ubuntu 使用在线安装脚本，支持选择 Codex、Claude Code 或同时部署。请进入对应平台的教程操作。
 
 ## 🖼️ 功能预览
 

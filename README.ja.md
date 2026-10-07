@@ -8,7 +8,7 @@
 
 <br />
 
-[![リリース](https://img.shields.io/badge/Release-v0.0.9-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![リリース](https://img.shields.io/badge/Release-v0.1.2-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![プライバシー](https://img.shields.io/badge/API_Key-ローカル保存-10b981?style=for-the-badge)](#-セキュリティとプライバシー)
@@ -46,14 +46,24 @@ AiDoIt は **Windows と Ubuntu x64 / ARM64** に対応します。Windows で�
 
 ### Windows 10/11 x64
 
-Windows の現行安定版は **AiDoIt v0.0.9** です。[GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) からのみダウンロードしてください。
+Windows の現行安定版は **AiDoIt v0.1.2** です。[GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) からのみダウンロードしてください。
 
 | パッケージ | 推奨用途 | ダウンロード |
 |---|---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | 一般ユーザーに推奨する標準インストーラー | [Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_x64-setup.exe) |
+| `AiDoIt_0.1.2_x64-setup.exe` | 一般ユーザーに推奨する標準インストーラー | [Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
 
 > [!TIP]
-> チェックサム確認、上書き更新、MSI のサイレントインストールは [Windows インストールガイド](HelpMd/Windows/Installation/README.md) を参照してください。
+> チェックサム確認、上書き更新、アンインストールについては [Windows インストールガイド](HelpMd/Windows/Installation/README.md) を参照してください。
+
+#### Windows v0.1.2 の主な変更点
+
+- Kiro / Claude の検索とツール呼び出しの互換性を修正し、サーバー側の検索呼び出しと結果を Responses イベントに変換できるようにしました。
+- モデルの推論レベルとツール設定を補完し、Codex プロンプト内のモデル識別情報と Claude / Kiro のコンテキストウィンドウを修正しました。
+- DeepSeek Harness の起動時に npm の最新バージョン情報を取得し、準備完了後にブラウザーを自動で開くよう改善しました。Node.js のダウンロードには回数を制限した再試行と、より明確なネットワークエラー表示を追加しました。
+
+[v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) · [Windows の詳しい更新内容](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)
+
+Windows OTA は `0.1.2` に更新済みで、既存の更新用公開鍵を引き続き使用します。同じ更新チャネルと公開鍵を使う旧バージョンでは、アプリ内から更新を確認できます。上記のインストーラーによる上書き更新も可能です。 [Windows OTA チャネル](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [公開更新マニフェスト](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 

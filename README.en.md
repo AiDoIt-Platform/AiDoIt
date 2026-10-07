@@ -8,7 +8,7 @@
 
 <br />
 
-[![Release](https://img.shields.io/badge/Release-v0.0.9-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v0.1.2-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Privacy](https://img.shields.io/badge/API_Keys-stay_local-10b981?style=for-the-badge)](#-security-and-privacy)
@@ -46,14 +46,24 @@ AiDoIt supports **Windows desktop and Ubuntu x64 / ARM64**. Manage **Codex, Chat
 
 ### Windows 10/11 x64
 
-The current stable Windows release is **AiDoIt v0.0.9**. Download only from [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
+The current stable Windows release is **AiDoIt v0.1.2**. Download only from [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
 
 | Package | Recommended use | Download |
 |---|---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | Standard installer recommended for most users | [Download Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_x64-setup.exe) |
+| `AiDoIt_0.1.2_x64-setup.exe` | Standard installer recommended for most users | [Download Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
 
 > [!TIP]
-> For checksum verification, upgrades, and silent MSI installation, see the [Windows installation guide](HelpMd/Windows/Installation/README.md).
+> For checksum verification, upgrades, and uninstall instructions, see the [Windows installation guide](HelpMd/Windows/Installation/README.md).
+
+#### Windows v0.1.2 highlights
+
+- Fixes Kiro / Claude search and tool-call compatibility, including converting server-side search calls and results into Responses events.
+- Completes model reasoning levels and tool-call settings, and corrects Codex prompt identities and Claude / Kiro context windows.
+- Improves DeepSeek Harness startup: refreshes npm version information and opens the browser once ready; Node.js downloads gain bounded retries and clearer network errors.
+
+[v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) · [Full Windows release notes](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)
+
+Windows OTA is now at `0.1.2` and retains the existing updater public key. Older versions using the same channel and key can check for updates in the app, or you can download the installer above to upgrade. [Windows OTA channel](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Public update manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 

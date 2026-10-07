@@ -8,7 +8,7 @@
 
 <br />
 
-[![릴리스](https://img.shields.io/badge/Release-v0.0.9-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![릴리스](https://img.shields.io/badge/Release-v0.1.2-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![개인정보](https://img.shields.io/badge/API_Key-로컬_저장-10b981?style=for-the-badge)](#-보안과-개인정보-보호)
@@ -46,14 +46,24 @@ AiDoIt은 **Windows 및 Ubuntu x64 / ARM64**를 지원합니다. Windows에서�
 
 ### Windows 10/11 x64
 
-현재 Windows 안정 버전은 **AiDoIt v0.0.9**입니다. [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)에서만 다운로드하세요.
+현재 Windows 안정 버전은 **AiDoIt v0.1.2**입니다. [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)에서만 다운로드하세요.
 
 | 패키지 | 권장 용도 | 다운로드 |
 |---|---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | 대부분의 사용자에게 권장하는 표준 설치 프로그램 | [Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_x64-setup.exe) |
+| `AiDoIt_0.1.2_x64-setup.exe` | 대부분의 사용자에게 권장하는 표준 설치 프로그램 | [Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
 
 > [!TIP]
-> 체크섬 검증, 덮어쓰기 업그레이드, MSI 자동 설치는 [Windows 설치 가이드](HelpMd/Windows/Installation/README.md)를 참고하세요.
+> 체크섬 검증, 덮어쓰기 업그레이드, 제거 방법은 [Windows 설치 가이드](HelpMd/Windows/Installation/README.md)를 참고하세요.
+
+#### Windows v0.1.2 주요 변경 사항
+
+- Kiro / Claude 검색 및 도구 호출 호환성을 수정하고, 서버 측 검색 호출과 결과를 Responses 이벤트로 변환하도록 지원합니다.
+- 모델 추론 수준과 도구 호출 설정을 보완하고, Codex 프롬프트의 모델 식별 정보와 Claude / Kiro 컨텍스트 창을 수정합니다.
+- DeepSeek Harness 시작 시 npm 최신 버전 정보를 갱신하고 서비스가 준비되면 브라우저를 자동으로 엽니다. Node.js 다운로드에는 제한된 재시도와 더 명확한 네트워크 오류 메시지를 추가합니다.
+
+[v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) · [Windows 전체 릴리스 노트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)
+
+Windows OTA가 `0.1.2`로 업데이트되었으며 기존 업데이트 공개 키를 그대로 사용합니다. 동일한 채널과 공개 키를 사용하는 이전 버전에서는 앱 내에서 업데이트를 확인할 수 있습니다. 위의 설치 프로그램으로 덮어쓰기 업그레이드할 수도 있습니다. [Windows OTA 채널](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [공개 업데이트 매니페스트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 

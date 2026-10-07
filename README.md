@@ -9,6 +9,7 @@
 <br />
 
 [![macOS Release](https://img.shields.io/badge/macOS-v0.1.2-7c3aed?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2)
+[![Windows Release](https://img.shields.io/badge/Windows-v0.1.2-0ea5e9?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](#windows-1011-x64)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Privacy](https://img.shields.io/badge/API_Key-仅存本机-10b981?style=for-the-badge)](#-安全与隐私)
@@ -46,14 +47,24 @@ AiDoIt 同时支持 **Windows、macOS Apple Silicon 桌面端与 Ubuntu x64 / AR
 
 ### Windows 10/11 x64
 
-以下为 **AiDoIt v0.0.9** 的 Windows 安装包。Windows 与 macOS 独立发布，请从对应的 [Windows 版本 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.0.9) 下载。
+当前 Windows 最新正式版为 **AiDoIt v0.1.2**。请只从 [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) 下载。
 
 | 安装包 | 适用场景 | 下载 |
 |---|---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | 标准安装程序，推荐大多数用户使用 | [下载 Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_x64-setup.exe) |
+| `AiDoIt_0.1.2_x64-setup.exe` | 标准安装程序，推荐大多数用户使用 | [下载 Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
 
 > [!TIP]
 > 需要校验文件、覆盖升级或卸载说明？请查看 [Windows 安装、升级、校验与卸载](HelpMd/Windows/Installation/README.md)。
+
+#### Windows v0.1.2 更新要点
+
+- 修复 Kiro / Claude 搜索与工具调用兼容性，支持将服务端搜索调用及结果转换为 Responses 事件。
+- 补齐模型推理档位与工具调用配置，修正 Codex 提示词身份和 Claude / Kiro 上下文窗口。
+- 改进 DeepSeek Harness 启动流程：刷新 npm 最新版本信息，服务就绪后自动打开浏览器；Node.js 下载增加有限重试和更明确的网络错误提示。
+
+查看 [v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) 和 [Windows 完整更新说明](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)。
+
+Windows OTA 已更新至 `0.1.2`，沿用现有更新公钥。使用同一更新通道及公钥的旧版本可在应用内检查更新；也可下载上方安装包覆盖升级。[Windows OTA 通道](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [公开更新清单](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS Apple Silicon（aarch64）
 

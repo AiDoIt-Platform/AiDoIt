@@ -1,8 +1,8 @@
 > [AiDoIt 首页](../../../README.md) / [帮助中心](../../README.md) / Windows 安装
 
-# AiDoIt Windows v0.0.9 安装与升级
+# AiDoIt Windows v0.1.2 安装与升级
 
-本文适用于 Windows 10/11 x64，介绍 `v0.0.9` 安装包选择、文件完整性校验、安装升级、首次启动和卸载恢复。
+本文适用于 Windows 10/11 x64，介绍 `v0.1.2` 安装包选择、文件完整性校验、安装升级、首次启动和卸载恢复。
 
 ## 1. 选择下载文件
 
@@ -10,46 +10,46 @@
 
 | 文件 | 适用场景 | 下载 |
 |---|---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | 标准安装程序，推荐大多数用户使用 | [下载 Setup](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_x64-setup.exe) |
+| `AiDoIt_0.1.2_x64-setup.exe` | 标准安装程序，推荐大多数用户使用 | [下载 Setup](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
 
-若已安装旧版本，请完全退出 AiDoIt 和相关客户端，再使用 `v0.0.9` 的标准安装程序覆盖升级。
+若已安装旧版本，请完全退出 AiDoIt 和相关客户端，再使用 `v0.1.2` 的标准安装程序覆盖升级。
 
 ## 2. 校验文件完整性
 
-Release 页面同时提供 [`windows-ota-SHA256SUMS.txt`](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/windows-ota-SHA256SUMS.txt)。在下载目录打开 PowerShell，运行：
+Release 页面同时提供 [`windows-ota-SHA256SUMS.txt`](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-SHA256SUMS.txt)。在下载目录打开 PowerShell，运行：
 
 ```powershell
-Get-FileHash .\AiDoIt_0.0.9_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\AiDoIt_0.1.2_x64-setup.exe -Algorithm SHA256
 ```
 
 将输出的 `Hash` 与 `windows-ota-SHA256SUMS.txt` 中同名文件的值比较。两者必须完全一致；不一致时请删除文件并重新从 GitHub Releases 下载。
 
-如需一次校验全部已下载的 `0.0.9` 文件：
+如需一次校验全部已下载的 `0.1.2` 文件：
 
 ```powershell
-Get-FileHash .\AiDoIt_0.0.9_x64* -Algorithm SHA256
+Get-FileHash .\AiDoIt_0.1.2_x64* -Algorithm SHA256
 ```
 
 本次正式发布的安装包 SHA-256 如下：
 
 | 文件 | SHA-256 |
 |---|---|
-| `AiDoIt_0.0.9_x64-setup.exe` | `12c9122adac9180e4e20ddb45be7dca62dfbb991285f6ea2c3ed3ee7e2933102` |
+| `AiDoIt_0.1.2_x64-setup.exe` | `b31c90e75165e20146485aaaa1cf9a6d54eb13018d1459e5d49a187c6aa29ac5` |
 
 ## 3. 安装或升级
 
 ### 应用内 OTA 更新
 
-Windows `v0.0.9` 已包含应用内更新能力。AiDoIt 可发现后续正式版本，也可在设置页面手动检查。发现更新后，应用会显示发布说明与下载进度，并使用内置公钥验证 updater 签名后再完成安装与重启。
+Windows `v0.1.2` 已包含应用内更新能力。AiDoIt 可发现后续正式版本，也可在设置页面手动检查。发现更新后，应用会显示发布说明与下载进度，并使用内置公钥验证 updater 签名后再完成安装与重启。
 
-如果当前版本没有应用内更新入口，或在线更新失败，请从 Releases 手动下载 `v0.0.9` 并按下方步骤覆盖安装。
+如果当前版本没有应用内更新入口，或在线更新失败，请从 Releases 手动下载 `v0.1.2` 并按下方步骤覆盖安装。
 
 ### 标准安装程序
 
 1. 完全退出 AiDoIt、Codex、ChatGPT、Claude 和 Claude Code。
-2. 双击 `AiDoIt_0.0.9_x64-setup.exe`。
+2. 双击 `AiDoIt_0.1.2_x64-setup.exe`。
 3. 按安装向导完成安装，然后从开始菜单启动 AiDoIt。
-4. 首次启动后确认版本为 `0.0.9`，再检查已有 Provider 与路由状态。
+4. 首次启动后确认版本为 `0.1.2`，再检查已有 Provider 与路由状态。
 
 ## 4. Windows 安全提示
 
