@@ -8,7 +8,7 @@
 
 <br />
 
-[![الإصدار](https://img.shields.io/badge/Release-v0.1.2-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![الإصدار](https://img.shields.io/badge/Release-v0.1.3-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![الخصوصية](https://img.shields.io/badge/API_Keys-محلية-10b981?style=for-the-badge)](#-الأمان-والخصوصية)
@@ -48,30 +48,36 @@
 
 ### Windows 10/11 x64
 
-الإصدار المستقر الحالي لـ Windows هو **AiDoIt v0.1.2**. نزّله فقط من [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
+الإصدار المستقر الحالي لـ Windows هو **AiDoIt v0.1.3**. نزّله فقط من [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
 
 | الحزمة | الاستخدام المقترح | التنزيل |
 |---|---|---|
-| `AiDoIt_0.1.2_x64-setup.exe` | برنامج التثبيت القياسي الموصى به لمعظم المستخدمين | [تنزيل Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
+| `AiDoIt_0.1.3_x64-setup.exe` | برنامج التثبيت القياسي الموصى به لمعظم المستخدمين | [تنزيل Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_x64-setup.exe) |
 
 > [!TIP]
 > للتحقق من المجموع الاختباري أو الترقية أو إلغاء التثبيت، راجع [دليل تثبيت Windows](HelpMd/Windows/Installation/README.md).
 
-#### أبرز تحديثات Windows v0.1.2
+#### أبرز تحديثات Windows v0.1.3
 
-- إصلاح توافق البحث واستدعاء الأدوات في Kiro / Claude، مع تحويل استدعاءات البحث على الخادم ونتائجها إلى أحداث Responses.
-- استكمال مستويات الاستدلال وإعدادات استدعاء الأدوات للنماذج، وتصحيح هوية النموذج في تعليمات Codex ونوافذ السياق في Claude / Kiro.
-- تحسين بدء DeepSeek Harness بتحديث معلومات إصدارات npm وفتح المتصفح عندما تصبح الخدمة جاهزة، وإضافة محاولات إعادة محدودة ورسائل أوضح لأخطاء الشبكة عند تنزيل Node.js.
+- إصلاح توجيه وكلاء Claude الفرعيين: تستخدم الطلبات التي تحمل معرّف وكيل فرعي نموذج `claude-sonnet-5-5` لدى المزود الحالي، وتحتفظ الجلسة الرئيسية بنموذجها دون متغيرات بيئة إضافية. يعتمد توفر النموذج على المزود.
+- يمكن لوكلاء Codex الفرعيين اختيار `ProviderID::ModelID` كامل أو معرّف خانة مخصص لحساب افتراضي من قائمة النماذج الحالية. تُرجع النماذج غير المعروفة أو غير الصالحة خطأ محليًا واضحًا.
+- مزامنة تحديثات فرع mac مع Windows مع الحفاظ على دعم تشغيل `.cmd` / `.exe` وPATH ومسارات Unicode/UNC وإنهاء أشجار العمليات.
 
-[v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) · [ملاحظات إصدار Windows الكاملة](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)
+[v0.1.3 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) · [ملاحظات إصدار Windows الكاملة](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/windows-ota-release-notes.md)
 
-تم تحديث قناة Windows OTA إلى `0.1.2` مع الاحتفاظ بمفتاح التحديث العام الحالي. يمكن للإصدارات السابقة التي تستخدم القناة والمفتاح نفسيهما التحقق من التحديثات داخل التطبيق، أو الترقية باستخدام برنامج التثبيت أعلاه. [قناة Windows OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [بيان التحديث العام](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
+تم تحديث قناة Windows OTA إلى `0.1.3` مع الاحتفاظ بمفتاح التحديث العام الحالي. يمكن للإصدارات السابقة التي تستخدم القناة والمفتاح نفسيهما التحقق من التحديثات داخل التطبيق، أو الترقية باستخدام برنامج التثبيت أعلاه. [قناة Windows OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [بيان التحديث العام](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 
-[تنزيل AiDoIt v0.0.9 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_aarch64.dmg)
+[تنزيل AiDoIt v0.1.3 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.dmg)
 
 اسحب AiDoIt إلى Applications.
+
+يصلح هذا الإصدار توجيه نماذج وكلاء Claude الفرعيين مع الإبقاء على نموذج الجلسة الرئيسية. تستخدم الطلبات التي تحمل معرّف وكيل فرعي نموذج `claude-sonnet-5-5` لدى المزود الحالي حسب توفره. يمكن لوكلاء Codex الفرعيين اختيار نماذج من القائمة الحالية، وتُرفض النماذج خارجها محليًا.
+
+[حزمة OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.app.tar.gz) · [قيم SHA-256](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-SHA256SUMS.txt) · [ملاحظات إصدار macOS الكاملة](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-release-notes.md)
+
+تم تحديث قناة macOS OTA إلى `0.1.3`. يمكن للإصدارات السابقة التي تستخدم قناة التحديث والمفتاح العام نفسيهما التحقق من التحديثات داخل التطبيق. [قناة macOS OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [بيان التحديث العام](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
 
 يستخدم هذا الإصدار توقيع ad-hoc ولم يخضع لتوثيق Apple. عند التشغيل الأول قد تحتاج إلى النقر بزر الفأرة الأيمن واختيار فتح.
 

@@ -8,7 +8,7 @@
 
 <br />
 
-[![Version](https://img.shields.io/badge/Release-v0.1.2-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![Version](https://img.shields.io/badge/Release-v0.1.3-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Datenschutz](https://img.shields.io/badge/API_Keys-bleiben_lokal-10b981?style=for-the-badge)](#-sicherheit-und-datenschutz)
@@ -46,30 +46,36 @@ AiDoIt unterstützt **Windows und Ubuntu x64 / ARM64**. Verwalte **Codex, ChatGP
 
 ### Windows 10/11 x64
 
-Die aktuelle stabile Windows-Version ist **AiDoIt v0.1.2**. Lade sie ausschließlich über [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) herunter.
+Die aktuelle stabile Windows-Version ist **AiDoIt v0.1.3**. Lade sie ausschließlich über [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) herunter.
 
 | Paket | Empfohlener Einsatz | Download |
 |---|---|---|
-| `AiDoIt_0.1.2_x64-setup.exe` | Standardinstaller, empfohlen für die meisten Nutzer | [Setup EXE herunterladen](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
+| `AiDoIt_0.1.3_x64-setup.exe` | Standardinstaller, empfohlen für die meisten Nutzer | [Setup EXE herunterladen](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_x64-setup.exe) |
 
 > [!TIP]
 > Hinweise zu Prüfsummen, Upgrades und Deinstallation findest du in der [Windows-Installationsanleitung](HelpMd/Windows/Installation/README.md).
 
-#### Neuerungen in Windows v0.1.2
+#### Neuerungen in Windows v0.1.3
 
-- Behebt Kompatibilitätsprobleme bei Suche und Tool-Aufrufen mit Kiro / Claude und wandelt serverseitige Suchaufrufe samt Ergebnissen in Responses-Ereignisse um.
-- Ergänzt Reasoning-Stufen und Tool-Einstellungen der Modelle und korrigiert die Modellidentität in Codex-Prompts sowie die Kontextfenster von Claude / Kiro.
-- Verbessert den Start von DeepSeek Harness: npm-Versionsinformationen werden aktualisiert und der Browser wird nach dem Start automatisch geöffnet. Node.js-Downloads erhalten begrenzte Wiederholungsversuche und klarere Netzwerkfehlermeldungen.
+- Korrigiert das Routing von Claude-Subagenten: Anfragen mit Subagenten-Kennung verwenden `claude-sonnet-5-5` des aktuellen Providers; die Hauptsitzung behält ihr Modell. Zusätzliche Umgebungsvariablen sind nicht nötig. Die Verfügbarkeit des Modells hängt vom Provider ab.
+- Codex-Subagenten können eine vollständige `ProviderID::ModellID` oder eine zugewiesene Slot-ID eines virtuellen Kontos aus dem aktuellen Modellkatalog wählen. Unbekannte oder ungültige Modelle liefern einen eindeutigen lokalen Fehler.
+- Windows übernimmt die Aktualisierungen des mac-Branches und behält die Unterstützung für `.cmd` / `.exe`, PATH, Unicode-/UNC-Pfade und das Beenden von Prozessbäumen bei.
 
-[v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) · [Vollständige Windows-Versionshinweise](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)
+[v0.1.3 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) · [Vollständige Windows-Versionshinweise](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/windows-ota-release-notes.md)
 
-Windows OTA ist jetzt auf `0.1.2` aktualisiert und verwendet weiterhin denselben öffentlichen Updater-Schlüssel. Ältere Versionen mit demselben Kanal und Schlüssel können in der App nach Updates suchen. Alternativ kannst du mit dem obigen Installer aktualisieren. [Windows-OTA-Kanal](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Öffentliches Update-Manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
+Windows OTA ist jetzt auf `0.1.3` aktualisiert und verwendet weiterhin denselben öffentlichen Updater-Schlüssel. Ältere Versionen mit demselben Kanal und Schlüssel können in der App nach Updates suchen. Alternativ kannst du mit dem obigen Installer aktualisieren. [Windows-OTA-Kanal](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Öffentliches Update-Manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 
-[AiDoIt v0.0.9 DMG herunterladen](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.0.9/AiDoIt_0.0.9_aarch64.dmg)
+[AiDoIt v0.1.3 DMG herunterladen](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.dmg)
 
 AiDoIt nach Applications ziehen.
+
+Diese Version korrigiert das Modell-Routing von Claude-Subagenten; das Modell der Hauptsitzung bleibt erhalten. Anfragen mit Subagenten-Kennung verwenden `claude-sonnet-5-5` des aktuellen Providers, sofern verfügbar. Codex-Subagenten wählen Modelle aus dem aktuellen Katalog; Modelle außerhalb des Katalogs werden lokal abgewiesen.
+
+[OTA-Paket](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.app.tar.gz) · [SHA-256-Prüfsummen](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-SHA256SUMS.txt) · [Vollständige macOS-Versionshinweise](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-release-notes.md)
+
+macOS OTA ist jetzt auf `0.1.3` aktualisiert. Ältere Versionen mit demselben Update-Kanal und öffentlichen Schlüssel können in der App nach Updates suchen. [macOS-OTA-Kanal](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [Öffentliches Update-Manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
 
 Dieser Build ist ad-hoc signiert und nicht von Apple notarisiert. Beim ersten Start kann ein Rechtsklick und Öffnen erforderlich sein.
 

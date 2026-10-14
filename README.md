@@ -8,8 +8,8 @@
 
 <br />
 
-[![macOS Release](https://img.shields.io/badge/macOS-v0.1.2-7c3aed?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2)
-[![Windows Release](https://img.shields.io/badge/Windows-v0.1.2-0ea5e9?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2)
+[![macOS Release](https://img.shields.io/badge/macOS-v0.1.3-7c3aed?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3)
+[![Windows Release](https://img.shields.io/badge/Windows-v0.1.3-0ea5e9?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](#windows-1011-x64)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Privacy](https://img.shields.io/badge/API_Key-仅存本机-10b981?style=for-the-badge)](#-安全与隐私)
@@ -47,38 +47,40 @@ AiDoIt 同时支持 **Windows、macOS Apple Silicon 桌面端与 Ubuntu x64 / AR
 
 ### Windows 10/11 x64
 
-当前 Windows 最新正式版为 **AiDoIt v0.1.2**。请只从 [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) 下载。
+当前 Windows 最新正式版为 **AiDoIt v0.1.3**。请只从 [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest) 下载。
 
 | 安装包 | 适用场景 | 下载 |
 |---|---|---|
-| `AiDoIt_0.1.2_x64-setup.exe` | 标准安装程序，推荐大多数用户使用 | [下载 Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_x64-setup.exe) |
+| `AiDoIt_0.1.3_x64-setup.exe` | 标准安装程序，推荐大多数用户使用 | [下载 Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_x64-setup.exe) |
 
 > [!TIP]
 > 需要校验文件、覆盖升级或卸载说明？请查看 [Windows 安装、升级、校验与卸载](HelpMd/Windows/Installation/README.md)。
 
-#### Windows v0.1.2 更新要点
+#### Windows v0.1.3 更新要点
 
-- 修复 Kiro / Claude 搜索与工具调用兼容性，支持将服务端搜索调用及结果转换为 Responses 事件。
-- 补齐模型推理档位与工具调用配置，修正 Codex 提示词身份和 Claude / Kiro 上下文窗口。
-- 改进 DeepSeek Harness 启动流程：刷新 npm 最新版本信息，服务就绪后自动打开浏览器；Node.js 下载增加有限重试和更明确的网络错误提示。
+- 修复 Claude 子代理模型路由：携带子代理标识的请求使用当前 Provider 的 `claude-sonnet-5-5`，主会话保留原模型，无需新增环境变量配置。该模型是否可用由 Provider 决定。
+- Codex 子代理可从当前模型目录中选择完整 `ProviderID::模型ID` 或虚拟账号分配的槽位 ID；未知或失效的模型在本地返回明确错误。
+- Windows 同步 mac 分支更新，保留 `.cmd` / `.exe` 启动、PATH、Unicode/UNC 路径和进程树回收等平台适配。
 
-查看 [v0.1.2 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) 和 [Windows 完整更新说明](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/windows-ota-release-notes.md)。
+查看 [v0.1.3 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) 和 [Windows 完整更新说明](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/windows-ota-release-notes.md)。
 
-Windows OTA 已更新至 `0.1.2`，沿用现有更新公钥。使用同一更新通道及公钥的旧版本可在应用内检查更新；也可下载上方安装包覆盖升级。[Windows OTA 通道](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [公开更新清单](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
+Windows OTA 已更新至 `0.1.3`，沿用现有更新公钥。使用同一更新通道及公钥的旧版本可在应用内检查更新；也可下载上方安装包覆盖升级。[Windows OTA 通道](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [公开更新清单](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS Apple Silicon（aarch64）
 
-当前 macOS 正式版为 **AiDoIt v0.1.2**，适用于 Apple Silicon Mac（M 系列芯片）。请从 [v0.1.2 版本 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.2) 下载。
+当前 macOS 正式版为 **AiDoIt v0.1.3**，适用于 Apple Silicon Mac（M 系列芯片）。请从 [v0.1.3 版本 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) 下载。
 
 | 文件 | 用途 | 下载 |
 |---|---|---|
-| `AiDoIt_0.1.2_aarch64.dmg` | 手动安装：打开后将 `AiDoIt.app` 拖入 Applications | [下载 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_aarch64.dmg) |
-| `AiDoIt_0.1.2_aarch64.app.tar.gz` | 应用内 OTA 更新包 | [下载更新包](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/AiDoIt_0.1.2_aarch64.app.tar.gz) |
-| `macos-ota-SHA256SUMS.txt` | DMG 与更新包的 SHA-256 校验值 | [下载校验文件](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.2/macos-ota-SHA256SUMS.txt) |
+| `AiDoIt_0.1.3_aarch64.dmg` | 手动安装：打开后将 `AiDoIt.app` 拖入 Applications | [下载 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.dmg) |
+| `AiDoIt_0.1.3_aarch64.app.tar.gz` | 应用内 OTA 更新包 | [下载更新包](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.app.tar.gz) |
+| `macos-ota-SHA256SUMS.txt` | DMG 与更新包的 SHA-256 校验值 | [下载校验文件](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-SHA256SUMS.txt) |
 
-本版修复 Claude 与 Codex 的 Kiro 搜索及工具执行兼容性，适配新增 GPT、Claude 模型，并修复模型目录中的指令、上下文窗口和工具能力配置。
+本版修复 Claude 子代理模型路由：携带子代理标识的请求使用当前 Provider 的 `claude-sonnet-5-5`，主会话保留原模型，无需新增环境变量配置；Codex 子代理可从当前可用模型目录中选择模型，目录外模型在本地拦截。`claude-sonnet-5-5` 是否可用由 Provider 决定。
 
-已安装旧版的用户可在应用内检查更新；macOS OTA 通道已更新至 `0.1.2`。
+[macOS 完整更新说明](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-release-notes.md)
+
+macOS OTA 已更新至 `0.1.3`。使用同一更新通道及公钥的旧版本可在应用内检查更新。 [macOS OTA 通道](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [公开更新清单](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
 
 > [!NOTE]
 > 此构建使用 **ad-hoc 签名，未做 Apple 公证**，已通过严格签名验证。首次打开时可能需要右键选择“打开”，或在 **系统设置 → 隐私与安全性** 中选择“仍要打开”。安装及使用步骤见 [macOS Codex 图文教程](HelpMd/macOS/Codex/README.md)。
