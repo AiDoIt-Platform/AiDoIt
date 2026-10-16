@@ -8,7 +8,7 @@
 
 <br />
 
-[![Release](https://img.shields.io/badge/Release-v0.1.3-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![Release](https://img.shields.io/badge/Release-v0.1.4-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Privacy](https://img.shields.io/badge/API_Keys-stay_local-10b981?style=for-the-badge)](#-security-and-privacy)
@@ -46,36 +46,36 @@ AiDoIt supports **Windows desktop and Ubuntu x64 / ARM64**. Manage **Codex, Chat
 
 ### Windows 10/11 x64
 
-The current stable Windows release is **AiDoIt v0.1.3**. Download only from [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
+The current stable Windows release is **AiDoIt v0.1.4**. Download only from [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
 
 | Package | Recommended use | Download |
 |---|---|---|
-| `AiDoIt_0.1.3_x64-setup.exe` | Standard installer recommended for most users | [Download Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_x64-setup.exe) |
+| `AiDoIt_0.1.4_x64-setup.exe` | Standard installer recommended for most users | [Download Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_x64-setup.exe) |
 
 > [!TIP]
 > For checksum verification, upgrades, and uninstall instructions, see the [Windows installation guide](HelpMd/Windows/Installation/README.md).
 
-#### Windows v0.1.3 highlights
+#### Windows v0.1.4 highlights
 
-- Fixes Claude subagent routing: requests carrying a subagent identifier use the current provider’s `claude-sonnet-5-5`; the main session keeps its model, with no extra environment variables required. Model availability depends on the provider.
-- Codex subagents can choose a full `ProviderID::modelID` or an assigned virtual-account slot ID from the current model catalog. Unknown or expired models return a clear local error.
-- Windows syncs the mac branch updates while retaining platform support for `.cmd` / `.exe` launch, PATH, Unicode/UNC paths, and process-tree cleanup.
+- Supports Codex paginated and compressed session history. Switching providers updates database metadata while preserving paginated logs, byte offsets, compressed files, and rollback support; older session formats remain supported.
+- After you confirm a forced shutdown, cleans up Codex/ChatGPT desktop apps, standalone Codex CLIs, shared background services, helper processes, and their children before switching routes. Insufficient permissions or a timeout block the switch; errors include process names and PIDs. Forced shutdown interrupts running tasks without deleting session history.
+- Fixes Windows DeepSeek Harness waiting indefinitely for child processes during shutdown.
 
-[v0.1.3 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) · [Full Windows release notes](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/windows-ota-release-notes.md)
+[v0.1.4 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.4) · [Full Windows release notes](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/windows-ota-release-notes.md)
 
-Windows OTA is now at `0.1.3` and retains the existing updater public key. Older versions using the same channel and key can check for updates in the app, or you can download the installer above to upgrade. [Windows OTA channel](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Public update manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
+Windows OTA is now at `0.1.4` and retains the existing updater public key. Older versions using the same channel and key can check for updates in the app, or you can download the installer above to upgrade. [Windows OTA channel](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Public update manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 
-[Download AiDoIt v0.1.3 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.dmg)
+[Download AiDoIt v0.1.4 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_aarch64.dmg)
 
 Drag AiDoIt into Applications.
 
-This release fixes Claude subagent model routing while keeping the main session’s model unchanged. Identified subagent requests use the current provider’s `claude-sonnet-5-5`, subject to provider availability. Codex subagents can select models from the current catalog; models outside it are rejected locally.
+Fixes processes remaining after forcing Codex/ChatGPT to close. Standalone Codex CLIs, shared background services, computer-use and code-execution helpers, and their child processes are stopped, and exit is confirmed before switching routes. Forced shutdown interrupts running tasks.
 
-[OTA package](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.app.tar.gz) · [SHA-256 checksums](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-SHA256SUMS.txt) · [Full macOS release notes](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-release-notes.md)
+[OTA package](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_aarch64.app.tar.gz) · [SHA-256 checksums](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/macos-ota-SHA256SUMS.txt) · [Full macOS release notes](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/macos-ota-release-notes.md)
 
-macOS OTA is now at `0.1.3`. Older versions using the same update channel and public key can check for updates in the app. [macOS OTA channel](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [Public update manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
+macOS OTA is now at `0.1.4`. Older versions using the same update channel and public key can check for updates in the app. [macOS OTA channel](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [Public update manifest](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
 
 This build is ad-hoc signed and is not notarized by Apple. On first launch, you may need to right-click and choose Open.
 

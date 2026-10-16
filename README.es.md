@@ -8,7 +8,7 @@
 
 <br />
 
-[![Versión](https://img.shields.io/badge/Release-v0.1.3-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![Versión](https://img.shields.io/badge/Release-v0.1.4-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![Privacidad](https://img.shields.io/badge/API_Keys-solo_local-10b981?style=for-the-badge)](#-seguridad-y-privacidad)
@@ -46,36 +46,36 @@ AiDoIt admite **Windows y Ubuntu x64 / ARM64**. Administra **Codex, ChatGPT, Cla
 
 ### Windows 10/11 x64
 
-La versión estable actual para Windows es **AiDoIt v0.1.3**. Descárgala únicamente desde [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
+La versión estable actual para Windows es **AiDoIt v0.1.4**. Descárgala únicamente desde [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest).
 
 | Paquete | Uso recomendado | Descarga |
 |---|---|---|
-| `AiDoIt_0.1.3_x64-setup.exe` | Instalador estándar recomendado para la mayoría de usuarios | [Descargar Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_x64-setup.exe) |
+| `AiDoIt_0.1.4_x64-setup.exe` | Instalador estándar recomendado para la mayoría de usuarios | [Descargar Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_x64-setup.exe) |
 
 > [!TIP]
 > Para verificar sumas de comprobación, actualizar o desinstalar, consulta la [guía de instalación de Windows](HelpMd/Windows/Installation/README.md).
 
-#### Novedades de Windows v0.1.3
+#### Novedades de Windows v0.1.4
 
-- Corrige el enrutamiento de subagentes de Claude: las solicitudes con identificador de subagente usan `claude-sonnet-5-5` del proveedor actual; la sesión principal conserva su modelo. No requiere variables de entorno adicionales. La disponibilidad del modelo depende del proveedor.
-- Los subagentes de Codex pueden elegir un `ProviderID::IDdelModelo` completo o un ID de ranura asignado a una cuenta virtual del catálogo actual. Los modelos desconocidos o no válidos devuelven un error local claro.
-- Windows incorpora las actualizaciones de la rama mac y mantiene la compatibilidad con `.cmd` / `.exe`, PATH, rutas Unicode/UNC y la finalización de árboles de procesos.
+- Admite el historial de sesiones paginado y comprimido de Codex. Al cambiar de proveedor, actualiza los metadatos de la base de datos y conserva los registros paginados, los desplazamientos de bytes, los archivos comprimidos y la capacidad de reversión. Mantiene la compatibilidad con los formatos anteriores.
+- Tras confirmar el cierre forzado, finaliza las aplicaciones de escritorio Codex/ChatGPT, las CLI independientes de Codex, los servicios compartidos en segundo plano, los procesos auxiliares y sus procesos hijos antes de cambiar el enrutamiento. La falta de permisos o un tiempo de espera agotado bloquean el cambio; los errores incluyen nombres de procesos y PID. Las tareas en curso se interrumpen sin borrar el historial de sesiones.
+- Corrige la espera indefinida de procesos hijos al cerrar DeepSeek Harness en Windows.
 
-[v0.1.3 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) · [Notas completas de Windows](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/windows-ota-release-notes.md)
+[v0.1.4 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.4) · [Notas completas de Windows](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/windows-ota-release-notes.md)
 
-Windows OTA ya está en `0.1.3` y conserva la clave pública de actualización existente. Las versiones anteriores que usan el mismo canal y la misma clave pueden buscar actualizaciones en la aplicación; también puedes actualizar con el instalador de arriba. [Canal OTA de Windows](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Manifiesto público de actualización](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
+Windows OTA ya está en `0.1.4` y conserva la clave pública de actualización existente. Las versiones anteriores que usan el mismo canal y la misma clave pueden buscar actualizaciones en la aplicación; también puedes actualizar con el instalador de arriba. [Canal OTA de Windows](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [Manifiesto público de actualización](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 
-[Descargar AiDoIt v0.1.3 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.dmg)
+[Descargar AiDoIt v0.1.4 DMG](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_aarch64.dmg)
 
 Arrastra AiDoIt a Applications.
 
-Esta versión corrige el enrutamiento de modelos de los subagentes de Claude y conserva el modelo de la sesión principal. Las solicitudes con identificador de subagente usan `claude-sonnet-5-5` del proveedor actual, según su disponibilidad. Los subagentes de Codex pueden elegir modelos del catálogo actual; los modelos ajenos al catálogo se rechazan localmente.
+Corrige los procesos que permanecen tras forzar el cierre de Codex/ChatGPT. Finaliza las CLI independientes de Codex, los servicios compartidos en segundo plano, los procesos auxiliares de control del ordenador y ejecución de código, y sus procesos hijos. Confirma su cierre antes de cambiar el enrutamiento. El cierre forzado interrumpe las tareas en curso.
 
-[Paquete OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.app.tar.gz) · [Sumas SHA-256](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-SHA256SUMS.txt) · [Notas completas de macOS](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-release-notes.md)
+[Paquete OTA](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_aarch64.app.tar.gz) · [Sumas SHA-256](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/macos-ota-SHA256SUMS.txt) · [Notas completas de macOS](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/macos-ota-release-notes.md)
 
-macOS OTA ya está en `0.1.3`. Las versiones anteriores que usan el mismo canal de actualización y la misma clave pública pueden buscar actualizaciones en la aplicación. [Canal OTA de macOS](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [Manifiesto público de actualización](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
+macOS OTA ya está en `0.1.4`. Las versiones anteriores que usan el mismo canal de actualización y la misma clave pública pueden buscar actualizaciones en la aplicación. [Canal OTA de macOS](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [Manifiesto público de actualización](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
 
 Esta compilación usa firma ad-hoc y no está notarizada por Apple. Al abrirla por primera vez, puede ser necesario hacer clic derecho y seleccionar Abrir.
 

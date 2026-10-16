@@ -8,7 +8,7 @@
 
 <br />
 
-[![릴리스](https://img.shields.io/badge/Release-v0.1.3-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
+[![릴리스](https://img.shields.io/badge/Release-v0.1.4-7c3aed?style=for-the-badge)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0ea5e9?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-x64%20%7C%20ARM64-e95420?style=for-the-badge&logo=ubuntu&logoColor=white)](HelpMd/Ubuntu/README.md)
 [![개인정보](https://img.shields.io/badge/API_Key-로컬_저장-10b981?style=for-the-badge)](#-보안과-개인정보-보호)
@@ -46,36 +46,36 @@ AiDoIt은 **Windows 및 Ubuntu x64 / ARM64**를 지원합니다. Windows에서�
 
 ### Windows 10/11 x64
 
-현재 Windows 안정 버전은 **AiDoIt v0.1.3**입니다. [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)에서만 다운로드하세요.
+현재 Windows 안정 버전은 **AiDoIt v0.1.4**입니다. [GitHub Releases](https://github.com/AiDoIt-Platform/AiDoIt/releases/latest)에서만 다운로드하세요.
 
 | 패키지 | 권장 용도 | 다운로드 |
 |---|---|---|
-| `AiDoIt_0.1.3_x64-setup.exe` | 대부분의 사용자에게 권장하는 표준 설치 프로그램 | [Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_x64-setup.exe) |
+| `AiDoIt_0.1.4_x64-setup.exe` | 대부분의 사용자에게 권장하는 표준 설치 프로그램 | [Setup EXE](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_x64-setup.exe) |
 
 > [!TIP]
 > 체크섬 검증, 덮어쓰기 업그레이드, 제거 방법은 [Windows 설치 가이드](HelpMd/Windows/Installation/README.md)를 참고하세요.
 
-#### Windows v0.1.3 주요 변경 사항
+#### Windows v0.1.4 주요 변경 사항
 
-- Claude 하위 에이전트 라우팅을 수정했습니다. 하위 에이전트 식별자가 있는 요청은 현재 Provider의 `claude-sonnet-5-5`를 사용하고 주 세션은 기존 모델을 유지합니다. 추가 환경 변수는 필요하지 않으며 모델 제공 여부는 Provider에 따라 다릅니다.
-- Codex 하위 에이전트는 현재 모델 목록에서 전체 `ProviderID::모델ID` 또는 가상 계정에 할당된 슬롯 ID를 선택할 수 있습니다. 알 수 없거나 유효하지 않은 모델은 로컬에서 명확한 오류를 반환합니다.
-- Windows에 mac 브랜치 업데이트를 반영하면서 `.cmd` / `.exe` 실행, PATH, Unicode/UNC 경로, 프로세스 트리 정리 등 플랫폼 지원을 유지합니다.
+- Codex의 페이지 분할 및 압축된 세션 기록을 지원합니다. Provider를 전환할 때 데이터베이스 메타데이터를 업데이트하고 페이지 분할 로그, 바이트 오프셋, 압축 파일과 롤백 기능을 유지합니다. 기존 세션 형식도 계속 지원합니다.
+- 강제 종료를 확인하면 Codex/ChatGPT 데스크톱 앱, 독립 Codex CLI, 공유 백그라운드 서비스, 보조 프로세스와 자식 프로세스를 정리하고 종료를 확인한 뒤 라우팅을 전환합니다. 권한 부족이나 시간 초과 시 전환을 중단하며 오류에 프로세스 이름과 PID를 표시합니다. 실행 중인 작업은 중단되지만 세션 기록은 삭제하지 않습니다.
+- Windows DeepSeek Harness가 종료 시 자식 프로세스를 무한정 기다리는 문제를 수정했습니다.
 
-[v0.1.3 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.3) · [Windows 전체 릴리스 노트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/windows-ota-release-notes.md)
+[v0.1.4 Release](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/v0.1.4) · [Windows 전체 릴리스 노트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/windows-ota-release-notes.md)
 
-Windows OTA가 `0.1.3`으로 업데이트되었으며 기존 업데이트 공개 키를 그대로 사용합니다. 동일한 채널과 공개 키를 사용하는 이전 버전에서는 앱 내에서 업데이트를 확인할 수 있습니다. 위의 설치 프로그램으로 덮어쓰기 업그레이드할 수도 있습니다. [Windows OTA 채널](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [공개 업데이트 매니페스트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
+Windows OTA가 `0.1.4`로 업데이트되었으며 기존 업데이트 공개 키를 그대로 사용합니다. 동일한 채널과 공개 키를 사용하는 이전 버전에서는 앱 내에서 업데이트를 확인할 수 있습니다. 위의 설치 프로그램으로 덮어쓰기 업그레이드할 수도 있습니다. [Windows OTA 채널](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/windows-ota-stable) · [공개 업데이트 매니페스트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/windows-ota-stable/windows-latest.json)
 
 ### macOS (Apple Silicon)
 
-[AiDoIt v0.1.3 DMG 다운로드](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.dmg)
+[AiDoIt v0.1.4 DMG 다운로드](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_aarch64.dmg)
 
 AiDoIt을 Applications로 드래그하세요.
 
-Claude 하위 에이전트 모델 라우팅을 수정하고 주 세션의 모델은 유지합니다. 식별자가 있는 하위 에이전트 요청은 현재 Provider의 `claude-sonnet-5-5`를 사용하며 제공 여부는 Provider에 따라 다릅니다. Codex 하위 에이전트는 현재 모델 목록에서 선택할 수 있고 목록 밖의 모델은 로컬에서 차단됩니다.
+Codex/ChatGPT 강제 종료 후 프로세스가 남는 문제를 수정했습니다. 독립 Codex CLI, 공유 백그라운드 서비스, 컴퓨터 조작 및 코드 실행 보조 프로세스와 자식 프로세스를 종료하고 확인한 뒤 라우팅을 전환합니다. 강제 종료하면 실행 중인 작업이 중단됩니다.
 
-[OTA 업데이트 패키지](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/AiDoIt_0.1.3_aarch64.app.tar.gz) · [SHA-256 체크섬](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-SHA256SUMS.txt) · [macOS 전체 릴리스 노트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.3/macos-ota-release-notes.md)
+[OTA 업데이트 패키지](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/AiDoIt_0.1.4_aarch64.app.tar.gz) · [SHA-256 체크섬](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/macos-ota-SHA256SUMS.txt) · [macOS 전체 릴리스 노트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/v0.1.4/macos-ota-release-notes.md)
 
-macOS OTA가 `0.1.3`으로 업데이트되었습니다. 동일한 업데이트 채널과 공개 키를 사용하는 이전 버전에서는 앱 내에서 업데이트를 확인할 수 있습니다. [macOS OTA 채널](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [공개 업데이트 매니페스트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
+macOS OTA가 `0.1.4`로 업데이트되었습니다. 동일한 업데이트 채널과 공개 키를 사용하는 이전 버전에서는 앱 내에서 업데이트를 확인할 수 있습니다. [macOS OTA 채널](https://github.com/AiDoIt-Platform/AiDoIt/releases/tag/mac-ota-stable) · [공개 업데이트 매니페스트](https://github.com/AiDoIt-Platform/AiDoIt/releases/download/mac-ota-stable/latest-macos.json)
 
 이 빌드는 ad-hoc 서명을 사용하며 Apple 공증을 받지 않았습니다. 처음 실행할 때 마우스 오른쪽 버튼을 클릭하고 열기를 선택해야 할 수 있습니다.
 
